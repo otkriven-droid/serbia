@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Srbija: Paralele 2000-2026</title>
+    <style>
+        :root {
+            --red: #c0392b;
+            --blue: #2980b9;
+            --dark: #2c3e50;
+            --light: #ecf0f1;
+            --green: #27ae60;
+            --gold: #f1c40f;
+            --gray: #7f8c8d;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            margin: 0;
+            background-color: #f4f7f6;
+        }
+
+        .header {
+            background: linear-gradient(135deg, var(--dark) 0%, #1a252f 100%);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+            border-bottom: 5px solid var(--gold);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+
+        h1 { margin: 0; font-size: 2.5em; text-transform: uppercase; letter-spacing: 2px; }
+        h2 { color: var(--dark); border-bottom: 2px solid var(--gold); padding-bottom: 10px; margin-top: 50px; }
+        h3 { color: var(--dark); margin-top: 30px; }
+
+        .stats-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .stats-table th, .stats-table td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .stats-table th { background-color: var(--dark); color: white; }
+        .stats-table tr:hover { background-color: #f9f9f9; }
+        
+        .ruin-table th { background-color: var(--red); }
+        .build-table th { background-color: var(--blue); }
+
+        .highlight-gold { color: #d4af37; font-weight: bold; font-size: 1.1em; }
+        .highlight-blue { color: var(--blue); font-weight: bold; }
+        .highlight-red { color: var(--red); font-weight: bold; }
+
+        .badge {
+            padding: 5px 10px;
+            border-radius: 4px;
+            font-size: 0.9em;
+            font-weight: bold;
+            display: inline-block;
+        }
+        .badge-red { background: #fdeaea; color: var(--red); }
+        .badge-green { background: #eafaf1; color: var(--green); }
+
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+            margin-top: 30px;
+        }
+
+        .card {
+            background: white;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            border-top: 4px solid var(--gray);
+        }
+
+        .blockquote {
+            background: white;
+            font-size: 1.2em;
+            border-left: 5px solid var(--gold);
+            padding: 20px 30px;
+            margin: 40px 0;
+            font-style: italic;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+
+        @media (max-width: 768px) {
+            .grid-2 { grid-template-columns: 1fr; }
+            .stats-table, .stats-table tbody, .stats-table tr, .stats-table td { display: block; width: 100%; }
+            .stats-table tr { margin-bottom: 15px; border: 1px solid #ddd; }
+            .stats-table td { text-align: right; padding-left: 50%; position: relative; }
+            .stats-table td::before { content: attr(data-label); position: absolute; left: 15px; width: 45%; text-align: left; font-weight: bold; }
+            .stats-table th { display: none; }
+        }
+
+        .footer {
+            text-align: center;
+            padding: 40px;
+            background: var(--dark);
+            color: white;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <h1>Srbija: Velika Paralela (2000 - 2026)</h1>
+    <p>Izveštaj o sistemskom razaranju i suverenoj obnovi države</p>
+</div>
+
+<div class="container">
+    
+    <h2>1. Ekonomska Krvna Slika i Kupovna Moć (2012 vs 2026)</h2>
+    <table class="stats-table">
+        <thead>
+            <tr>
+                <th>Ekonomski Pokazatelj</th>
+                <th>Stanje 2012. Godine</th>
+                <th>Stanje 2026. Godine (Mart)</th>
+                <th>Trend / Promena</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td data-label="Pokazatelj">Zlatne rezerve</td>
+                <td data-label="2012">15,3 tone</td>
+                <td data-label="2026" class="highlight-gold">53,6 tona</td>
+                <td data-label="Promena"><span class="badge badge-green">+250%</span></td>
+            </tr>
+            <tr>
+                <td data-label="Pokazatelj">Devizne rezerve (NBS)</td>
+                <td data-label="2012">10,9 milijardi €</td>
+                <td data-label="2026" class="highlight-blue">29,8 milijardi €</td>
+                <td data-label="Promena"><span class="badge badge-green">+173%</span></td>
+            </tr>
+            <tr>
+                <td data-label="Pokazatelj">Prosečna neto plata</td>
+                <td data-label="2012">41.400 RSD (~360 €)</td>
+                <td data-label="2026" class="highlight-blue">112.000 RSD (~955 €)</td>
+                <td data-label="Promena"><span class="badge badge-green">+170%</span></td>
+            </tr>
+            <tr>
+                <td data-label="Pokazatelj">Minimalna zarada</td>
+                <td data-label="2012">19.500 RSD</td>
+                <td data-label="2026" class="highlight-blue">64.554 RSD</td>
+                <td data-label="Promena"><span class="badge badge-green">+231%</span></td>
+            </tr>
+            <tr>
+                <td data-label="Pokazatelj">Stopa nezaposlenosti</td>
+                <td data-label="2012" class="highlight-red">23,9%</td>
+                <td data-label="2026" class="highlight-blue">8,8%</td>
+                <td data-label="Promena"><span class="badge badge-green">Pad na minimum</span></td>
+            </tr>
+            <tr>
+                <td data-label="Pokazatelj">Kupovna moć: Hleb "Sava"</td>
+                <td data-label="2012">940 vekni za platu</td>
+                <td data-label="2026">1.800 vekni za platu</td>
+                <td data-label="Promena"><span class="badge badge-green">Gotovo duplo više</span></td>
+            </tr>
+            <tr>
+                <td data-label="Pokazatelj">Plata u odnosu na korpu</td>
+                <td data-label="2012" class="highlight-red">Pokriva samo 74% korpe</td>
+                <td data-label="2026" class="highlight-blue">Pokriva 102% korpe</td>
+                <td data-label="Promena"><span class="badge badge-green">Prvi put plata veća od korpe</span></td>
+            </tr>
+            <tr>
+                <td data-label="Pokazatelj">Likvidnost (Rezerve / Dug)</td>
+                <td data-label="2012" class="highlight-red">61% pokrivenosti</td>
+                <td data-label="2026" class="highlight-blue">121% pokrivenosti</td>
+                <td data-label="Promena"><span class="badge badge-green">Apsolutna sigurnost</span></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>2. Era Razaranja: Katalog Sistemskog Uništavanja (2000–2012)</h2>
+    <p>Ovaj period karakteriše proces privatizacije koji je bio praćen otpuštanjem radnika, korupcijom i namernim uništavanjem preduzeća zarad rasprodaje lokacija i imovine.</p>
+    
+    <table class="stats-table ruin-table">
+        <thead>
+            <tr>
+                <th>R.B.</th>
+                <th>Preduzeće / Industrijski Gigant</th>
+                <th>Sudbina i posledice (do 2012. godine)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td data-label="R.B.">1.</td><td data-label="Preduzeće"><strong>IMT i IMR</strong></td><td data-label="Posledice">Nekada vodeći proizvođač traktora prodat po niskoj ceni, uništen zarad građevinskog zemljišta na Novom Beogradu. Srbija izgubila domaću proizvodnju.</td></tr>
+            <tr><td data-label="R.B.">2.</td><td data-label="Preduzeće"><strong>Jugoremedija (Zrenjanin)</strong></td><td data-label="Posledice">Izvlačenje sredstava i neispunjavanje obaveza od strane novih vlasnika doveli su do potpunog kraha ovog farmaceutskog bisera.</td></tr>
+            <tr><td data-label="R.B.">3.</td><td data-label="Preduzeće"><strong>BIP (Beograd)</strong></td><td data-label="Posledice">Namerno gušenje proizvodnje piva sa velikom tradicijom zarad pretvaranja fabričkih lokacija kod Mostara u građevinsko zemljište.</td></tr>
+            <tr><td data-label="R.B.">4.</td><td data-label="Preduzeće"><strong>Azotara (Pančevo)</strong></td><td data-label="Posledice">Prodata po simboličnoj ceni; oprema isečena u staro gvožđe, što je dovelo do kraha proizvodnje veštačkog đubriva.</td></tr>
+            <tr><td data-label="R.B.">5.</td><td data-label="Preduzeće"><strong>Fabrika stakla (Paraćin)</strong></td><td data-label="Posledice">Izvlačenje novca iz kompanije bez ulaganja rezultiralo je stečajem i ostavljanjem hiljada porodica bez posla.</td></tr>
+            <tr><td data-label="R.B.">6.</td><td data-label="Preduzeće"><strong>Zastava automobili</strong></td><td data-label="Posledice">Nakon dugog iscrpljivanja, prodata Fiatu. Nestanak nacionalnog brenda automobila uz otpuštanje ogromnog broja domaćih radnika.</td></tr>
+            <tr><td data-label="R.B.">7.</td><td data-label="Preduzeće"><strong>Geneks (Generalexport)</strong></td><td data-label="Posledice">Rasprodaja imovine (uključujući kule i hotele) ispod cene kroz kontroverzne procese; gašenje najvećeg izvoznika.</td></tr>
+            <tr><td data-label="R.B.">8.</td><td data-label="Preduzeće"><strong>Luka Beograd</strong></td><td data-label="Posledice">Privatizovana 2005. uz zanemarivanje osnovne lučke i logističke delatnosti radi basnoslovnog profita na nekretninama.</td></tr>
+            <tr><td data-label="R.B.">9.</td><td data-label="Preduzeće"><strong>RTB Bor</strong></td><td data-label="Posledice">Neuspešne privatizacije praćene tehnološkom degradacijom i stvaranjem gubitaka koji su se merili stotinama miliona evra.</td></tr>
+            <tr><td data-label="R.B.">10.</td><td data-label="Preduzeće"><strong>Sartid (Smederevo)</strong></td><td data-label="Posledice">Prodat američkom U.S. Steel-u za svega 23 miliona $. Kada su se povukli 2012, državi je ostavljena kompanija u ogromnim dugovima.</td></tr>
+            <tr><td data-label="R.B.">11.</td><td data-label="Preduzeće"><strong>Prva petoletka (Trstenik)</strong></td><td data-label="Posledice">Nekadašnji izvoznik hidraulike za Boing postepeno je propao zbog nedostatka modernizacije.</td></tr>
+            <tr><td data-label="R.B.">12.</td><td data-label="Preduzeće"><strong>IM Bek (Zrenjanin)</strong></td><td data-label="Posledice">Najveća mesna industrija sa ogromnom tradicijom je rasparčana, a imovina rasprodata.</td></tr>
+            <tr><td data-label="R.B.">13.</td><td data-label="Preduzeće"><strong>EI Niš</strong></td><td data-label="Posledice">Ostavljen bez investicija, tehnološki centar Balkana pretvoren je u napuštene i devastirane hale.</td></tr>
+            <tr><td data-label="R.B.">14.</td><td data-label="Preduzeće"><strong>Viskoza Loznica</strong></td><td data-label="Posledice">Potpuno ekološko i privredno uništenje giganta hemijske industrije.</td></tr>
+            <tr><td data-label="R.B.">15.</td><td data-label="Preduzeće"><strong>MINEL</strong></td><td data-label="Posledice">Sistemsko rasparčavanje energetskog i elektro-mašinskog sektora Srbije.</td></tr>
+            <tr><td data-label="R.B.">16.</td><td data-label="Preduzeće"><strong>BEKO i YUMCO</strong></td><td data-label="Posledice">Uništenje tekstilne industrije; prodavnice na ekskluzivnim lokacijama postale su plen za preprodavce nekretnina.</td></tr>
+            <tr><td data-label="R.B.">17.</td><td data-label="Preduzeće"><strong>Magnohrom (Kraljevo)</strong></td><td data-label="Posledice">Katastrofalna privatizacija koja je zaustavila proizvodnju vatrootpornih materijala i zavila Kraljevo u crno.</td></tr>
+            <tr><td data-label="R.B.">18.</td><td data-label="Preduzeće"><strong>Zmaj (Zemun)</strong></td><td data-label="Posledice">Srbija je prestala da proizvodi sopstvene kombajne; fabrika je srušena i pretvorena u magacine i tržne centre.</td></tr>
+            <tr><td data-label="R.B.">19.</td><td data-label="Preduzeće"><strong>Ikarbus</strong></td><td data-label="Posledice">Namerno urušavanje domaćeg proizvođača autobusa zarad uvozničkih lobija.</td></tr>
+            <tr><td data-label="R.B.">20.</td><td data-label="Preduzeće"><strong>DMB (Rakovica)</strong></td><td data-label="Posledice">Srce avio i motorne industrije uništeno i rasprodato kao sekundarna sirovina.</td></tr>
+        </tbody>
+    </table>
+
+    <div class="grid-2">
+        <div class="card" style="border-top-color: var(--red);">
+            <h3 style="margin-top: 0;">Gubitak Resursa i Finansija</h3>
+            <ul>
+                <li><b>Izvori vode:</b> Prodaja kultnih brendova (Knjaz Miloš, Rosa, Mivela) stranim korporacijama. Srbija gubi kontrolu nad sopstvenim "belim zlatom".</li>
+                <li><b>Poljoprivreda:</b> Rasparčavanje kombinata poput PKB-a i Agroživa, prelazak sa izvoznika na uvoznika hrane.</li>
+                <li><b>Bankarski sektor:</b> Gašenje više od 20 domaćih banaka (Beobanka, Beogradska, Jugobanka, Investbanka) kako bi stranci preuzeli domaće tržište.</li>
+            </ul>
+        </div>
+        <div class="card" style="border-top-color: var(--red);">
+            <h3 style="margin-top: 0;">Urušavanje Vojske i Suvereniteta</h3>
+            <ul>
+                <li><b>Demilitarizacija:</b> Vojska svedena sa 120.000 na jedva 30.000 loše opremljenih vojnika.</li>
+                <li><b>Uništavanje oružja:</b> Istopljeno preko 400 tenkova i oklopnih vozila, uništeni sistemi PVO (Strela-2M).</li>
+                <li><b>Štetni sporazumi:</b> Potpisivanje NATO sporazuma o tranzitu (2006) i otvaranje bezbednosnih struktura za uticaj stranih ambasada.</li>
+            </ul>
+        </div>
+    </div>
+
+    <h2>3. Era Obnove i Suvereniteta (2012–2026)</h2>
+    <p>Od 2012. godine, Srbija je prekinula praksu rasprodaje i prešla na akumulaciju kapitala, gradnju, privlačenje investitora i istorijsku podršku porodici i zdravstvu.</p>
+    
+    <div class="grid-2">
+        <div class="card" style="border-top-color: var(--blue);">
+            <h3 style="margin-top: 0;">Infrastruktura: Izgrađeno ~623 km</h3>
+            <ul>
+                <li><b>Autoput "Miloš Veliki":</b> U potpunosti integrisana Zapadna Srbija.</li>
+                <li><b>Koridor 10:</b> Konačno savladane i završene Grdelička i Sićevačka klisura (Jug i Istok).</li>
+                <li><b>Moravski koridor (A5):</b> Prvi digitalni auto-put u Srbiji.</li>
+                <li><b>Brza pruga:</b> Tehnološki skok, brzine do 200 km/h na linijama kao što je Beograd–Subotica.</li>
+            </ul>
+        </div>
+
+        <div class="card" style="border-top-color: var(--blue);">
+            <h3 style="margin-top: 0;">Ekonomija, Fabrike i Urbanizam</h3>
+            <ul>
+                <li><b>Strani investitori i fabrike:</b> Otvorene su stotine novih fabrika i pogona širom Srbije, uz rekordan, istorijski priliv stranih direktnih investicija.</li>
+                <li><b>EXPO 2027:</b> Srbija je izborila status domaćina najveće svetske izložbe, pretvarajući Beograd u svetski centar.</li>
+                <li><b>Sređivanje gradova:</b> Rekonstruisane su stotine ulica, trgova i hiljade fasada u gradovima koje su decenijama bile prepuštene zubu vremena.</li>
+            </ul>
+        </div>
+
+        <div class="card" style="border-top-color: var(--blue);">
+            <h3 style="margin-top: 0;">Zdravstvo i Podrška Porodici</h3>
+            <ul>
+                <li><b>Obnova zdravstva:</b> Izgrađeni potpuno novi i renovirani klinički centri (Beograd, Niš, Novi Sad), kao i stotine domova zdravlja i opštih bolnica.</li>
+                <li><b>Lečenje i retke bolesti:</b> Udesetostručeni budžeti za lečenje retkih bolesti i upućivanje pacijenata u inostranstvo (što se pre rešavalo isključivo SMS porukama).</li>
+                <li><b>Istorijski socijalni program:</b> Ogromne državne donacije za majke (višestruko uvećana davanja za 1., 2., 3. i 4. dete) i subvencije za kupovinu prvog stana.</li>
+            </ul>
+        </div>
+
+        <div class="card" style="border-top-color: var(--blue);">
+            <h3 style="margin-top: 0;">Obrazovanje, Kultura, Sport i Vojska</h3>
+            <ul>
+                <li><b>Škole i vrtići:</b> Izgrađene i renovirane stotine obdaništa, škola i fakulteta po svim okruzima.</li>
+                <li><b>Kultura:</b> Nakon više od decenije "pod katancem", otvoreni su Narodni muzej i Muzej savremene umetnosti.</li>
+                <li><b>Sport:</b> Izgrađeni novi fudbalski stadioni, atletske dvorane, a državne premije za osvajače sportskih medalja podignute na apsolutno najviši nivo u regionu (npr. 200.000€ za olimpijsko zlato).</li>
+                <li><b>Vojska:</b> Nabavljeni najmoderniji PVO sistemi (FK-3, Pancir), modernizovana avijacija (MiG-29, Rafali, helikopteri Mi-35M) i razvijena domaća proizvodnja (Nora, Lazar, Miloš).</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="blockquote">
+        "Kada deci rešite sve probleme, vi im ostajete jedini problem." — Duško Radović
+        <br><br>
+        <span style="font-size: 0.85em; font-style: normal; color: #555;">Danas, kada Srbija više nije otirač za tuđe interese, kada ljudi masovno putuju i zidaju kuće na stabilnim kreditima jer je dinar fiksiran punih 14 godina, oni koji su do 2012. pljačkali državu nazivaju njenu izgradnju "diktaturom". Svaki izgrađeni kilometar bolnice, svako obnovljeno obdanište i svaki gram od onih 53,6 tona zlata u trezoru NBS je štit protiv povratka u tu prošlost.</span>
+    </div>
+
+</div>
+
+<div class="footer">
+    <p>Izveštaj pripremljen na osnovu dokumentacije, podataka NBS i RZS (Stanje: Mart 2026. godine)</p>
+    <p>&copy; 2026</p>
+</div>
+
+</body>
+</html>
